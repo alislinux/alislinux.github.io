@@ -1,0 +1,312 @@
+/*
+Arakawa Template - Ver.1.1 (Stable)
+
+(c)2015-2019 Sora Arakawa all rights reserved.
+Released under the MIT license
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+*/
+
+
+/* Common Settings */
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body,table,input {
+	font-family: "Hiragino Kaku Gothic Pro","ヒラギノ角ゴ Pro W3",メイリオ,Meiryo,"ＭＳ Ｐゴシック",sans-serif;
+	font-size: 14px;
+	color: rgb(60,60,60);
+}
+
+input {
+	height: 26px;
+	padding: 0 2px;
+	border: solid 1px rgb(60,60,60);
+}
+
+input[type="button"] {
+	background-color: rgb(240,240,240);
+}
+
+
+/* Theme */
+
+.theme-blue,.theme-red,.theme-green { color: rgb(60,60,60); }
+.theme-blue { background-color: rgb(154,214,234); }
+.theme-red { background-color: rgb(255,128,255); }
+.theme-green { background-color: rgb(128,255,128); }
+
+
+/* Text Size */
+
+.tx-18 { font-size: 18px; }
+.tx-22 { font-size: 22px; }
+.tx-26 { font-size: 26px; }
+
+
+/* Colors */
+
+.text-white { color: rgb(255,255,255); }
+
+
+/* Effects */
+
+.add-shadow-text {	text-shadow: 1px 1px 2px #222222; }
+.add-shadow-box {	box-shadow: 1px 1px 2px #222222; }
+.add-rounded { border-radius: 10px; }
+
+
+/* Header */
+
+.header {
+	margin: auto;
+	padding: 30px 0;
+	overflow: hidden;
+}
+
+
+/* Wrapper */
+
+.wrap {
+	margin: auto;
+	overflow: hidden;
+}
+
+.width-800px { width: 800px; }
+.width-900px { width: 900px; }
+.width-1000px { width: 1000px; }
+.width-1100px { width: 1100px; }
+.width-1200px { width: 1200px; }
+
+
+/* Wrapper - Columns */
+
+.wrap-columns { overflow: hidden; }
+.wrap-columns-narrow { width: 24%; }
+.wrap-columns-standard { width: 49%; }
+.wrap-columns-wide { width: 74%; }
+.wrap-columns-left { float: left; }
+.wrap-columns-right { float: right; }
+
+
+/* Footer */
+
+.footer {
+	padding: 10px;
+	margin-top: 20px;
+}
+
+
+/* Hyperlink Element */
+a {
+	color: rgb(60,60,60);
+}
+
+a:hover {
+	color: rgb(120,120,120);
+}
+
+
+/* Headline Element */
+
+h1,h2,h3,h4,h5,h6 {
+	margin-top: 40px;
+	margin-bottom: 10px;
+}
+
+h1 {
+	font-size: 30px;
+	font-weight: bold;
+}
+
+h2 {
+	font-size: 26px;
+	font-weight: bold;
+}
+
+h3 {
+	font-size: 22px;
+	font-weight: bold;
+}
+
+h4 {
+	font-size: 18px;
+	font-weight: bold;
+}
+
+h5 {
+	font-size: 14px;
+	font-weight: bold;
+}
+
+h6 {
+	font-size: 12px;
+	font-weight: bold;
+}
+
+p {
+	margin: 10px 0;
+}
+
+
+/* Border Element (HR Tag) */
+
+hr {
+	height: 1px;
+	margin: 10px 0;
+	background-color: #555;
+	border: none;
+}
+
+hr.thick {
+	height: 2px;
+}
+
+hr.very-thick {
+	height: 3px;
+}
+
+
+/* Table */
+
+table {
+	border-collapse: collapse;
+	text-align: left;
+	line-height: 1.5;
+}
+
+th {
+	padding: 10px;
+	font-weight: bold;
+	vertical-align: top;
+	border: 1px solid #ccc;
+	white-space: nowrap;
+}
+
+td {
+	padding: 10px;
+	vertical-align: top;
+	border: 1px solid #ccc;
+	white-space: normal;
+}
+
+
+/* Border */
+
+.bottom-border-blue {
+	border-bottom: solid 2px rgb(154,214,234);
+}
+
+.bottom-border-red {
+	border-bottom: solid 2px rgb(255,128,255);
+}
+
+.bottom-border-green {
+	border-bottom: solid 2px rgb(128,255,128);
+}
+
+
+/* Icon + Fukidashi (Speech balloon) */
+
+.icon-fukidashi {
+	overflow: hidden;
+}
+
+.icon-fukidashi-icon {
+	float: left;
+}
+
+.icon-fukidashi-icon img {
+	width: 64px;
+	margin-top: 8px;
+}
+
+.icon-circle img {
+	border-radius: 32px;
+}
+
+.icon-rounded img {
+	border-radius: 8px;
+}
+
+.icon-fukidashi-icon p {
+	text-align: center;
+}
+
+.icon-fukidashi-fukidashi {
+	position: relative;
+	display: inline-block;
+	margin: 1.5em 0 1.5em 30px;
+	padding: 7px 10px;
+	min-width: 120px;
+	max-width: 100%;
+}
+
+.icon-fukidashi-fukidashi:before {
+	content: "";
+	position: absolute;
+	display: block;
+	margin-top: -4px;
+	margin-left: -36px;
+	border: 15px solid transparent;
+}
+
+.icon-fukidashi-fukidashi p {
+	margin: 0;
+	padding: 0;
+}
+
+.theme-blue:before { border-right: 15px solid rgb(154,214,234); }
+.theme-red:before { border-right: 15px solid rgb(255,128,255); }
+.theme-green:before { border-right: 15px solid rgb(128,255,128); }
+
+
+/* Responsive CSS */
+
+@media screen and ( max-width: 820px ){
+	.width-800px { width: 95%; }
+	.width-800px .wrap-columns-narrow,.width-800px .wrap-columns-standard,.width-800px .wrap-columns-wide { width: 100%; }
+}
+
+@media screen and ( max-width: 920px ){
+	.width-900px { width: 95%; }
+	.width-900px .wrap-columns-narrow,.width-900px .wrap-columns-standard,.width-900px .wrap-columns-wide { width: 100%; }
+}
+
+@media screen and ( max-width: 1020px ){
+	.width-1000px { width: 95%; }
+	.width-1000px .wrap-columns-narrow,.width-1000px .wrap-columns-standard,.width-1000px .wrap-columns-wide { width: 100%; }
+}
+
+@media screen and ( max-width: 1120px ){
+	.width-1100px { width: 95%; }
+	.width-1100px .wrap-columns-narrow,.width-1100px .wrap-columns-standard,.width-1100px .wrap-columns-wide { width: 100%; }
+}
+
+@media screen and ( max-width: 1220px ){
+	.width-1200px { width: 95%; }
+	.width-1200px .wrap-columns-narrow,.width-1200px .wrap-columns-standard,.width-1200px .wrap-columns-wide { width: 100%; }
+}
+
+@media screen and ( max-width: 823px ){
+	.wrap-columns-right { float: left; }
+}

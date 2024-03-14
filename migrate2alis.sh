@@ -108,10 +108,9 @@ alis_repo(){
 	pacman-key --recv-key 36f612f2 --keyserver keyserver.ubuntu.com
 	pacman-key --lsign-key 36f612f2
 
-	pacman -U --noconfirm \
-	       'https://alislinux.github.io/repo/alis-keyring.pkg.tar.zst' \
-	       'https://alislinux.github.io/repo/alis-mirrorlist.pkg.tar.zst' \
-	       'https://alislinux.github.io/repo/alis-logo.pkg.tar.zst'
+	pacman -U 'https://alislinux.github.io/repo/alis-keyring.pkg.tar.zst' \
+		  'https://alislinux.github.io/repo/alis-mirrorlist.pkg.tar.zst' \
+		  'https://alislinux.github.io/repo/alis-logo.pkg.tar.zst'
 
 	mv /etc/pacman.conf /etc/pacman.conf.backup
 	cat << EOF > /etc/pacman.conf
@@ -236,9 +235,8 @@ chaotic_repo(){
 	pacman-key --recv-key C880C036 --keyserver keyserver.ubuntu.com
 	pacman-key --lsign-key C880C036
 
-	pacman -U --noconfirm \
-	       'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst' \
-	       'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst'
+	pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst' \
+		  'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst'
 
 	cat << EOF >> /etc/pacman.conf
 [chaotic-aur]
@@ -303,3 +301,4 @@ else
 		exit 0
 	fi
 fi
+

@@ -270,14 +270,12 @@ main(){
 		read -n1 selected
 		if [[ $selected == "y" ]]; then
 			echo
-			#alis_repo
-			echo "alis_repo"
+			alis_repo
 			echo "Add 'Chaotic AUR'? [y/N]"
 			read -n1 selected
 			if [[ $selected == "y" ]]; then
 				echo
-				#chaotic_repo
-				echo "chaotic_repo"
+				chaotic_repo
 				end
 			else
 				end

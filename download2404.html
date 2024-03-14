@@ -173,8 +173,12 @@
 			<a id="migrate"> </a>
 			<div>
 				<h2 class="bottom-border-blue">既存環境からの移行</h2>
-				<p>こちらのリンク(準備中)から移行用スクリプトをダウンロードして下さい。<br>
-				※NJBのSourceForgeプロジェクト以外からダウンロードしたファイルは正規品との同一性が保障されません。安全のため、必ず公式からダウンロードするようにして下さい。</p>
+				<p>以下の手順で移行を行なって下さい。</p>
+				<code>
+					sudo pacman -Syu<br>
+					wget https://alislinux.github.io/migrate2alis.sh<br>
+					sudo bash migrate2alis.sh
+				</code>
 			</div>
 
 			<div>
@@ -184,8 +188,25 @@
 				<br>
 				尚、スクリプト自体は三条項BSDライセンスの下で許諾されます。</p>
 			</div>
-		</div>
 
+			<div>
+				<h3>対応しないOS</h3>
+				<p>以下のOSはArchのリポジトリを間借りしていないため、Alisへの移行はできません。</p>
+				<ul>
+					<li>Manjaro及び派生</li>
+					<li>Parabola GNU/Linux-libre</li>
+					<li>Hyperbola GNU/Linux-libre</li>
+				</ul>
+				<br>
+				<p>以下のOSはPacmanを採用しながらArchのシステムに基づいていないため、Alisへの移行はできません。</p>
+				<ul>
+					<li>KaOS</li>
+					<li>Frugalware Linux</li>
+				</ul>
+				<br>
+				<p>その他Arch派生でないディストリビューションからの移行はできません。新規にインストールして下さい。</p>
+			</div>
+		</div>
 
 		<div class="footer2">
 			<ul class="md-flex">

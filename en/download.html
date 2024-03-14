@@ -31,6 +31,21 @@
 			<h1 class="bottom-border-blue">DOWNLOAD</h1>
 			<div>
 				<h2>Download Alis Linux/GNU/X</h2>
+				<p>There are two ways to install Alis: you can download the ISO and burn it to media, or you can migrate from your existing Arch-based OS.<br>
+				Which do you prefer?</p>
+				<table border="1" cellpadding="8" cellspacing="0" width="100%">
+					<tr>
+						<td align="center" style="width:calc(100%/5)"><a href="#iso">Download ISO</a></td>
+						<td align="center" style="width:calc(100%/5)"><a href="#migrate">Migrate from existing environment</a></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+
+		<div class="wrap width-1000px">
+			<a id="iso"> </a>
+			<div>
+				<h2 class="bottom-border-blue">Download ISO</h3>
 				<p>We are currently preparing to release version 24.04. Just a moment.</p>
 			</div>
 
@@ -127,6 +142,44 @@
 			</div>
 		</div>
 
+		<div class="wrap width-1000px">
+			<a id="migrate"> </a>
+			<div>
+				<h2 class="bottom-border-blue">Migrate from existing environment</h2>
+				<p>Please follow the steps below to perform the migration.</p>
+				<code>
+					sudo pacman -Syu<br>
+					wget https://alislinux.github.io/migrate2alis.sh<br>
+					sudo bash migrate2alis.sh
+				</code>
+			</div>
+
+			<div>
+				<h3>License</h3>
+				<p>When you use Alis, you require the agreement of the End-user License Agreement (EULA) and various licenses.<br>
+				Please take a look at the license displayed when you run the script.<br>
+				<br>
+				The script itself is licensed under the 3-clause BSD license.</p>
+			</div>
+
+			<div>
+				<h3>OSs Not Supported</h3>
+				<p>The following operating systems do not use Arch repositories and cannot be migrated to Alis.</p>
+				<ul>
+					<li>Manjaro and Manjaro-based</li>
+					<li>Parabola GNU/Linux-libre</li>
+					<li>Hyperbola GNU/Linux-libre</li>
+				</ul>
+				<br>
+				<p>The following operating systems are not based on the Arch system while employing Pacman and therefore cannot be migrated to Alis.</p>
+				<ul>
+					<li>KaOS</li>
+					<li>Frugalware Linux</li>
+				</ul>
+				<br>
+				<p>Migration from other non-Arch-derived distributions is not possible. Please install anew.</p>
+			</div>
+		</div>
 
 		<div class="footer2">
 			<ul class="md-flex">

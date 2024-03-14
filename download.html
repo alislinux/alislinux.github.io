@@ -31,6 +31,21 @@
 			<h1 class="bottom-border-blue">DOWNLOAD</h1>
 			<div>
 				<h2>Alis Linux/GNU/Xをダウンロード</h2>
+				<p>Alisは2つインストール方法があります。一つはISOをダウンロードしてメディアに焼く方法、もう一つは既存のArch系OSから移行する方法です。<br>
+				どっちがいい？</p>
+				<table border="1" cellpadding="8" cellspacing="0" width="100%">
+					<tr>
+						<td align="center" style="width:calc(100%/5)"><a href="#iso">ISOをダウンロード</a></td>
+						<td align="center" style="width:calc(100%/5)"><a href="#migrate">既存環境から移行</a></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+
+		<div class="wrap width-1000px">
+			<a id="iso"> </a>
+			<div>
+				<h2 class="bottom-border-blue">ISOをダウンロード</h3>
 				<p>現在、バージョン24.04の公開を準備しています。もう少し待ってね。</p>
 			</div>
 		</div>
@@ -138,6 +153,45 @@
 						<td style="width:calc(100%/2)">スクショ準備中…</td>
 					</tr>
 				</table>
+			</div>
+		</div>
+
+		<div class="wrap width-1000px">
+			<a id="migrate"> </a>
+			<div>
+				<h2 class="bottom-border-blue">既存環境からの移行</h2>
+				<p>以下の手順で移行を行なって下さい。</p>
+				<code>
+					sudo pacman -Syu<br>
+					wget https://alislinux.github.io/migrate2alis.sh<br>
+					sudo bash migrate2alis.sh
+				</code>
+			</div>
+
+			<div>
+				<h3>ライセンス</h3>
+				<p>Alisのご利用にあたっては、利用規約（EULA）及び各種ライセンスの同意が必要です。<br>
+				スクリプト実行時にライセンスが表示されるので、それをご覧下さい。<br>
+				<br>
+				尚、スクリプト自体は三条項BSDライセンスの下で許諾されます。</p>
+			</div>
+
+			<div>
+				<h3>対応しないOS</h3>
+				<p>以下のOSはArchのリポジトリを間借りしていないため、Alisへの移行はできません。</p>
+				<ul>
+					<li>Manjaro及び派生</li>
+					<li>Parabola GNU/Linux-libre</li>
+					<li>Hyperbola GNU/Linux-libre</li>
+				</ul>
+				<br>
+				<p>以下のOSはPacmanを採用しながらArchのシステムに基づいていないため、Alisへの移行はできません。</p>
+				<ul>
+					<li>KaOS</li>
+					<li>Frugalware Linux</li>
+				</ul>
+				<br>
+				<p>その他Arch派生でないディストリビューションからの移行はできません。新規にインストールして下さい。</p>
 			</div>
 		</div>
 

@@ -296,7 +296,7 @@ if [[ $UID != "0" ]]; then
 else
 	echo "Install dependencies for this script."
 	echo
-	pacman -S less
+	pacman -S --needed less
 	if [[ $? == "0" ]]; then
 		main
 	else

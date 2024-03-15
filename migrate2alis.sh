@@ -226,7 +226,7 @@ Include = /etc/pacman.d/mirrorlist
 #Server = file:///home/custompkgs
 EOF
 
-	pacman -Syyuu --noconfirm
+	pacman -Syyuu
 }
 
 chaotic_repo(){
@@ -294,7 +294,7 @@ if [[ $UID != "0" ]]; then
 else
 	echo "Install dependencies for this script."
 	echo
-	pacman -S --needed less
+	pacman -S --needed less wget
 	if [[ $? == "0" ]]; then
 		main
 	else

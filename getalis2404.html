@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 	<head>
-		<title>ダウンロード | Alis Linux/GNU/X</title>
+		<title>24.04をダウンロード | Alis Linux/GNU/X</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1">
 		<link rel="stylesheet" href="css/ArakawaTemplate.css">
@@ -19,7 +19,7 @@
 							<td align="center" style="width:calc(100%/6)"><a href="index.html#info">INFORMATIONS</a></td>
 							<td align="center" style="width:calc(100%/6)"><a href="index.html#about">ABOUT ALIS</a></td>
 							<td align="center" style="width:calc(100%/6)"><a href="getalis.html">GET ALIS</a></td>
-							<td align="center" style="width:calc(100%/6)"><a href="https://nmimusic.github.io/" target="_blank">NMI OFFICIAL</a></td>
+							<td align="center" style="width:calc(100%/6)"><a href="https://nmimusic.github.io/" target="_blank">NJB OFFICIAL</a></td>
 							<td align="center" style="width:calc(100%/6)">JPN | <a href="en/getalis.html">ENG</a></td>
 						</tr>
 					</table>
@@ -30,11 +30,11 @@
 		<div class="wrap width-1000px">
 			<h1 class="bottom-border-blue">GET ALIS</h1>
 			<div>
-				<p>Alisは3つインストール方法があります。どれがいい？</p>
+				<p>Alisはインストール方法が3つあります。どれがいい？</p>
 				<table border="1" cellpadding="8" cellspacing="0" width="100%">
 					<tr>
 						<td align="center" style="width:calc(100%/3)"><a href="#iso">ISOをダウンロード</a></td>
-						<td align="center" style="width:calc(100%/3)"><a href="buyalis.html">有償版を購入</a></td>
+						<td align="center" style="width:calc(100%/3)"><a href="buyalis.html">有償版を購入（計画中）</a></td>
 						<td align="center" style="width:calc(100%/3)"><a href="#migrate">既存環境から移行</a></td>
 					</tr>
 				</table>
@@ -82,17 +82,27 @@
 			</div>
 		</div>
 
-
 		<div class="wrap width-1000px">
 			<a id="iso"> </a>
 			<div>
 				<h2 class="bottom-border-blue">ISOをダウンロード</h2>
-				<p>現在、バージョン24.04の公開を準備しています。もう少し待ってね。</p>
+				<p>この仮想ディスクはDVDやUSBメモリに焼いて、インストールメディアとして下さい。<br>
+				インストールメディアから起動するとすぐに「Calamares」インストーラーが立ち上がります。ライブ環境での試用はできません。<br>
+				尚、この仮想ディスクは新規に導入する場合のみお使い下さい。既存環境からはソフトウェアセンターから及びコマンド「nako -Syu」で更新できます。<br>
+				<br>
+				ダウンロード、使用、共有など全て自由ですが、<b>サポートがありません。自己責任でご利用下さい。</b><br>
+				インストールサポートが必要な場合は、<a href="#paidversion">有償版の購入をご検討下さい。</a><br>
+				※NJBのSourceForgeプロジェクト以外からダウンロードしたファイルは正規品との同一性が保障されません。安全のため、必ず公式からダウンロードするようにして下さい。</p>
 			</div>
 
 			<div>
-				<h3>フレーバーの特徴</h3>
-				<p>こんな感じでどうですかね</p>
+				<h3>USBに焼く時は</h3>
+				<p>必ずDDモードで焼いて下さい。Windowsでは「Rufus」がお勧めです。</p>
+			</div>
+
+			<div>
+				<h3>ダウンロード！</h3>
+				<p>以下からISOをダウンロードして下さい。</p>
 
 				<table border="1" cellpadding="8" cellspacing="0" width="100%">
 					<tr>
@@ -103,6 +113,7 @@
 							<p>CPU 1GHz以上のx86_64<br>
 							RAM 512 MB(1 GB推奨)<br>
 							固定ドライブ 20 GB以上</p>
+							<div align="center"><b><a href="https://sourceforge.net/projects/alislinux/files/iso/24.04/alis-lxqt-ja-24.04-x86_64.iso" target="_blank">DOWNLOAD NOW!!</a></b></div>
 						</td>
 						<td style="width:calc(100%/2)"><img src="img/ss/alis-lxqt1.png" alt="LXQt Desktop" width="450"></td>
 					</tr>
@@ -115,6 +126,7 @@
 							<p>CPU 1GHz以上のx86_64<br>
 							RAM 512 MB(1 GB推奨)<br>
 							固定ドライブ 20 GB以上</p>
+							<div align="center"><b><a href="https://sourceforge.net/projects/alislinux/files/iso/24.04/alis-lxqt-amber-ja-24.04-x86_64.iso" target="_blank">DOWNLOAD NOW!!</a></b></div>
 						</td>
 					</tr>
 					<tr>
@@ -125,6 +137,7 @@
 							<p>CPU 1GHz以上のx86_64<br>
 							RAM 768 GB(2 GB推奨)<br>
 							固定ドライブ 20 GB以上</p>
+							<div align="center"><b><a href="https://sourceforge.net/projects/alislinux/files/iso/24.04/alis-gnome-ja-24.04-x86_64.iso" target="_blank">DOWNLOAD NOW!!</a></b></div>
 						</td>
 						<td style="width:calc(100%/2)"><img src="img/ss/alis-gnome.png" alt="GNOME Desktop" width="450"></td>
 					</tr>
@@ -137,6 +150,7 @@
 							<p>CPU 1GHz以上のx86_64<br>
 							RAM 768 MB(2 GB推奨)<br>
 							固定ドライブ 20 GB以上</p>
+							<div align="center"><b><a href="https://sourceforge.net/projects/alislinux/files/iso/24.04/alis-plasma-ja-24.04-x86_64.iso" target="_blank">DOWNLOAD NOW!!</a></b></div>
 						</td>
 					</tr>
 					<tr>
@@ -147,6 +161,7 @@
 							<p>CPU 1GHz以上のx86_64<br>
 							RAM 640 MB(1.2 GB推奨)<br>
 							固定ドライブ 20 GB以上</p>
+							<div align="center"><b><a href="https://sourceforge.net/projects/alislinux/files/iso/24.04/alis-xfce-ja-24.04-x86_64.iso" target="_blank">DOWNLOAD NOW!!</a></b></div>
 						</td>
 						<td style="width:calc(100%/2)"><img src="img/ss/alis-xfce.png" alt="Xfce Desktop" width="450"></td>
 					</tr>
@@ -159,7 +174,7 @@
 			<div>
 				<h2 class="bottom-border-blue">有償版を購入</h2>
 				<p>有償版は以下の2種類を予定しています。価格はどちらも2,200円（税込み）です。</p>
-				<ul style="padding-left:50px">
+				<ul style=padding-left:50px>
 					<li>Professional …GNOME版に「Multivalent」及び「Chaotic AUR」から厳選したソフトウェアを同梱したエディション</li>
 					<li>Studio …Plasma版をマルチメディア編集に特化させたエディション</li>
 				</ul>
@@ -183,15 +198,12 @@
 
 			<div>
 				<h3>ライセンス</h3>
-				<p>Alisのご利用にあたっては、利用規約（EULA）及び各種ライセンスの同意が必要です。<br>
-				スクリプト実行時にライセンスが表示されるので、それをご覧下さい。<br>
-				<br>
-				尚、スクリプト自体は三条項BSDライセンスの下で許諾されます。</p>
+				スクリプト実行時にライセンスが表示されるので、それをご覧下さい。尚、スクリプト自体は三条項BSDライセンスの下で許諾されます。</p>
 			</div>
 
 			<div>
 				<h3>対応しないOS</h3>
-				<ul style="padding-left:50px">
+				<ul style=padding-left:50px>
 					<li>Manjaro及び派生ディストロははArchのリポジトリを間借りしていないため、移行できません。</li>
 					<li>initシステムにsystemdを用いないシステムからの移行はできません。</li>
 					<li>KaOS、Frugalware LinuxはPacmanを採用しながら、Archのシステムに基づいていないため、Alisへの移行はできません。</li>

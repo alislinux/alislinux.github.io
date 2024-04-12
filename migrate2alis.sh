@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Migration to Alis LGX
-# Copyright (c) 2023-2024, NAKA-MURA JUKEBOX.
+# Copyright (c) 2023-2024, Nakamura Musical Industries Dojin Club.
 #
 # Redistribution and use in source and binary forms, with or without modification, are permitted
 # provided that the following conditions are met:
@@ -23,42 +23,6 @@
 # SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 selected=""
-
-license(){
-	cat << EOF | less
-Nakamura Musical Industries Open Source Software End User License Agreement
-
-Section 0: Preface
-"We," "us," "our," and "NMI" refer to Nakamura Musical Industries Dojin Club. "You" and "your" refers to the individual or entity that has acquired the Open Source Software ("OSS") provided by NMI.
-This Agreement shall be governed by and construed in accordance with the laws of Japan.
-
-Section 1: General Clauses
-This Agreement applies only to OSS developed by the NMI. It does not therefore apply to closed source software such as games, music, publications or other works.
-This Agreement does not apply to any separate agreement between NMI and you regarding this product.
-This Agreement written in Japanese shall be interpreted in such a way that it supersedes any version written in any other language. The text written in Japanese is the original and the other languages are provided for reference purposes only. If there is any conflict or inconsistency between the Japanese text and the texts in the other languages, the Japanese text shall prevail.
-
-Section 2: Trademarks
-The name of this software is a trademark of Nakamura Musical Industries Dojin Club. The license of trademarks are not granted herein.
-Any use of the trademarks for purposes such as advertising, endorsement, support, certification, quality assurance or granting official status requires prior written permission, except in cases of fair use.
-
-Section 3: Redistribution and Modification
-Redistribution of this software without removing or replacing trademarks owned by NMI requires express permission from NMI. Further, NMI does not provide any guarantees for packages that were modified, built, or released by any third parties.
-
-Section 4: Export Controls and Sanctions Laws
-Each party shall comply with all applicable laws, regulations, rules, and government orders relating to export and re-export controls, economic sanctions and trade sanctions of any country (collectively “Export Controls and Sanctions Laws”) in performing any of its obligations under this agreement.
-
-Section 5: Licences for each components developed by non-NMI
-In the case of software that contains other components, such as Linux/GNU/X, you are responsible for identifying and complying with the licence of the relevant component.
-This Agreement does not limit, override or alter the rights you have under the licence of each component.
-
-Section 6: Disclaimer
-TO THE EXTENT PERMITTED BY APPLICABLE LAW, THIS SOFTWARE DISCLAIMS ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
-IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-
-Enacted and enforced on April 2, 2024
-
-EOF
-}
 
 alis_repo(){
 	pacman-key --recv-key 36f612f2 --keyserver keyserver.ubuntu.com
@@ -198,6 +162,14 @@ EOF
 
 	rm /etc/arch-release
 	pacman -Suu
+
+	if command -v plymouth-set-default-theme; then
+		plymouth-set-default-theme -R alis-logo
+	fi
+
+	if [ -d /var/lib/Packagekit/ ]; then
+		rm -rf /var/lib/Packagekit/alpm/*
+	fi
 }
 
 chaotic_repo(){
@@ -240,13 +212,12 @@ end(){
 
 main(){
 	echo "Welcome to Alis Linux/GNU/X Migration Script!"
-	echo "(C) 2024 Naka-mura Jukebox"
+	echo "(C) 2024 Nakamura Musical Industries Dojin Club"
 	echo
-	echo "When you use Alis Linux/GNU/X, you require the agreement of the End-user License Agreement (EULA) and various licenses."
-	echo "Press any key to display the license..."
-	read -n1 selected
-	license
-	echo "Do you agree the licenses?" [y/N]
+	echo "When you use Alis Linux/GNU/X, you require the agreement of the End User License Agreement (EULA). Please check it from this URL."
+	echo "https://nmimusic.github.io/eula.pdf"
+	echo
+	echo "Do you agree the license?" [y/N]
 	read -n1 selected
 	if [[ $selected == "y" ]]; then
 		clear
